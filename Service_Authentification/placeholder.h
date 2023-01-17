@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+// Pour permettre d'ouvrir une nouvelle page il faut faire :
+// clique droit sur le projet < add New < Qt Designer Form Class < MainWindow
+
 namespace Ui {
 class PlaceHolder;
 }

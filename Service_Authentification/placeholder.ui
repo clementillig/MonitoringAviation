@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1401</width>
+    <height>997</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -97,7 +97,7 @@ color: white;</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">border-image: url(:/icons/airport-64.png);
+          <string notr="true">border-image: url(:/icons/icons/airport-64.png);
 </string>
          </property>
          <property name="text">
@@ -137,7 +137,7 @@ color: rgb(255, 255, 255)</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">border-image: url(:/icons/avion-64.png)
+          <string notr="true">border-image: url(:/icons/icons/avion-64.png);
 </string>
          </property>
          <property name="text">
@@ -508,7 +508,7 @@ height: 2px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1401</width>
      <height>21</height>
     </rect>
    </property>
