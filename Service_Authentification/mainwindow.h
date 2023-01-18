@@ -31,8 +31,10 @@ public slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
+    void receivebackVariables(std::map<QString , QString> m_logins);
 signals:
-    void sendVariables();
+    void sendVariables(std::map<QString , QString> m_logins);
 
 
 
@@ -42,7 +44,6 @@ private:
     PlaceHolder *placeholder;
     Creer_un_compte *compte;
     std::map<QString , QString> logins;
-
 };
 
 #endif // MAINWINDOW_H

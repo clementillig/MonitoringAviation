@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+//Pour régler le bug de "ui.machin.h not found" il suffit de remplacer le u de ui par U puis de le rechanger par u
+
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -9,8 +11,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->lineEdit_2->setEchoMode(QLineEdit::Password); // Cette ligne permet de cacher le mot de passe lorsqu'il est tapé
-
-
 }
 
 
@@ -24,8 +24,10 @@ void MainWindow::on_pushButton_clicked()
     QString identifiant = ui->lineEdit->text();
     QString password = ui->lineEdit_2->text();
 
-    if(identifiant == "test" && password == "test"){
-        placeholder = new PlaceHolder(this); // Ces 2 lignes permettent d'ouvrir une nouvelle page MainWindow
+    if( logins.find(identifiant) != logins.end() && logins[identifiant] == password){
+        placeholder = new PlaceHolder(this); // Ces lignes permettent d'ouvrir une nouvelle page de type MainWindow ( différent de la classe MainWindow, c'est un type d'application Qt )
+        placeholder->setWindowState(Qt::WindowMaximized);
+        placeholder->setWindowTitle("Dashboard");
         placeholder->show();
         hide();
     }
@@ -43,6 +45,9 @@ void MainWindow::on_pushButton_clicked()
 }
 }
 
+void MainWindow::receivebackVariables(std::map<QString , QString> m_logins){
+   this->logins = m_logins;
+}
 
 void MainWindow::on_pushButton_2_clicked()
 {
@@ -50,7 +55,11 @@ void MainWindow::on_pushButton_2_clicked()
     compte->setWindowTitle("Creer un compte");
     compte->show();
 
-    connect(this, &MainWindow::sendVariables, compte, &Creer_un_compte::receiveVariables);
+    connect(this, &MainWindow::sendVariables, compte, &Creer_un_compte::receiveVariables); //On connecte mainwindow à compte
+    emit sendVariables(logins);
 
+    connect(compte, &Creer_un_compte::sendbackVariables, this, &MainWindow::receivebackVariables); //On connecte compte à mainwindow (la relation de connexion par signals and slots n'est pas une relation d'équivalence)
 
 }
+
+
