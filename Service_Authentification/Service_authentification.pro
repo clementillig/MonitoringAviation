@@ -16,17 +16,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    placeholder.cpp \
-    creer_un_compte.cpp
+    creer_un_compte.cpp \
+    placeholder.cpp
 
 HEADERS  += mainwindow.h \
-    placeholder.h \
-    creer_un_compte.h
+    creer_un_compte.h \
+    placeholder.h
 
 FORMS    += mainwindow.ui \
-    placeholder.ui \
-    creer_un_compte.ui
+    creer_un_compte.ui \
+    placeholder.ui
 
 RESOURCES += \
-    resources.qrc \
-    dashboard_icons.qrc
+    dashboard_icons.qrc \
+    resources.qrc

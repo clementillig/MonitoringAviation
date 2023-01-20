@@ -3,23 +3,33 @@
 
 #include <QMainWindow>
 
-// Pour permettre d'ouvrir une nouvelle page il faut faire :
-// clique droit sur le projet < add New < Qt Designer Form Class < MainWindow
+#include <QFile>
+#include <QTextStream>
+#include <QDebug>
 
-namespace Ui {
-class PlaceHolder;
-}
+#include <QString>
+#include <QStringList>
+#include <QFileDialog>
+
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class PlaceHolder; }
+QT_END_NAMESPACE
 
 class PlaceHolder : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit PlaceHolder(QWidget *parent = 0);
+    PlaceHolder(QWidget *parent = nullptr);
     ~PlaceHolder();
+
+
+
+private slots:
+    void on_importButton_clicked();
 
 private:
     Ui::PlaceHolder *ui;
 };
-
 #endif // PLACEHOLDER_H
