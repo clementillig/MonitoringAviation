@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/airport-64.png</file>
+        <file>icons/avion-64.png</file>
+        <file>icons/loupe.png</file>
+        <file>icons/black-airport.png</file>
+        <file>icons/black-avion.png</file>
+    </qresource>
+    <qresource prefix="/csv_files">
+        <file>AirportsList.csv</file>
+        <file>Vol.csv</file>
+    </qresource>
+</RCC>

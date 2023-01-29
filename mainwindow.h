@@ -2,33 +2,48 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QFile>
-#include <QTextStream>
-#include <QDebug>
+#include <QMessageBox>
+#include <map>
+#include <algorithm>
+#include <QObject>
 
-#include <QString>
-#include <QStringList>
-#include <QFileDialog>
+#include "placeholder.h"
+#include "creer_un_compte.h"
 
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+
+// C'est sur ce fichier que toutes les variables utilisées dans mainwindow.cpp doivent être initialisées
+
+namespace Ui {
+class MainWindow;
+}
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
 
+public slots:
+    void on_pushButton_clicked();
 
-private slots:
-    void on_importButton_clicked();
+    void on_pushButton_2_clicked();
+
+    void receivebackVariables(std::map<QString , QString> m_logins);
+signals:
+    void sendVariables(std::map<QString , QString> m_logins);
+
+
 
 private:
+    int counter = 0;
     Ui::MainWindow *ui;
+    PlaceHolder *placeholder;
+    Creer_un_compte *compte;
+    std::map<QString , QString> logins;
 };
+
 #endif // MAINWINDOW_H

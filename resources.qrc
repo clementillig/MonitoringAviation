@@ -1,9 +1,6 @@
 <RCC>
-    <qresource prefix="/icons">
-        <file>aeroport.png</file>
-        <file>avion.png</file>
-        <file>loupe.png</file>
-        <file>airport-64.png</file>
-        <file>avion-64.png</file>
+    <qresource prefix="/logo">
+        <file>logo/sky_background.png</file>
+        <file>logo/flight-wallpaper.jpg</file>
     </qresource>
 </RCC>

@@ -1,0 +1,10 @@
+Geo Point;Name;Name (en);Name (fr);IATA code;ICAO code;Wikidata id;Operator;Country;Country code;Altitude
+43.0962276, 6.1498611;Aeroport de Toulon-Hyeres;;;TLN;LFTH;Q543189;CCI du Var;France;FR;50
+42.5546214, 9.4822981;Aeroport international de Bastia-Poretta;International airport of Bastia-Poretta;Aeroport international de Bastia-Poretta;BIA;LFKB;Q1430951;;France;FR;20
+43.4375586, 5.2135912;Aeroport de Marseille Provence;;;MRS;LFML;Q651190;;France;FR;10
+43.6299473, 1.3637499;Aeroport de Toulouse-Blagnac;;;TLS;LFBO;Q372615;;France;FR;300
+43.3791392, -0.4201974;Aeroport de Pau Pyrenees;Pau Pyrenees Airport;;PUF;LFBP;;Pau Chamber of Commerce;France;FR;1000
+45.7245281, 5.0873268;Aeroport Lyon Saint-Exupery;Lyon-Saint Exupery Airport;Aeroport Lyon Saint-Exup?ry;LYS;LFLL;Q1547;;France;FR;800
+43.5798377, 3.9664417;Aeroport de Montpellier - Mediterranee;;;MPL;LFMT;;;France;FR;40
+43.6597926, 7.2150735;Aeroport de Nice-Cote d'Azur;Nice Cote d'Azur Airport;Aeroport de Nice-Cote d'Azur;NCE;LFMN;Q821557;;France;FR;20
+43.4691926, -1.5231207;Aeroport de Biarritz Pays Basque;;Aeroport de Biarritz Pays Basque;BIQ;LFBZ;;;France;FR;10
