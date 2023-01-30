@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/logo">
+        <file>logo/sky_background.png</file>
+        <file>logo/flight-wallpaper.jpg</file>
+    </qresource>
+</RCC>
